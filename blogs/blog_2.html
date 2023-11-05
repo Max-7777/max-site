@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>blog_2</title>
+  <title>Blog #2</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -31,20 +31,23 @@
   <![endif]-->
 </head>
 <body>
-<script src="../../script.js"></script>
+<header id="title-block-header">
+<h1 class="title">Blog #2</h1>
+</header>
+<script src="../script.js"></script>
 <a style="font-size: calc(1rem + 4px); visibility: hidden; margin-left: -25px;">✧</a>
 <span id="Index" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../../index.html">Index</a> <span
-id="Blog" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../../blogs.html">Blog</a> <span
+<a class="link" style="" href="../index.html">Index</a> <span id="Blog"
+style="width: 5px; display: inline-block;"></span>
+<a class="link" style="" href="../blogs.html">Blog</a> <span
 id="Software" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../../software.html">Software</a> <span
+<a class="link" style="" href="../software.html">Software</a> <span
 id="Games" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../../games.html">Games</a> <span
+<a class="link" style="" href="../games.html">Games</a> <span
 id="Photography" style="width: 5px; display: inline-block;"></span>
 <a style="">Photography</a> <span id="CV"
 style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../../cv.html">CV</a>
+<a class="link" style="" href="../cv.html">CV</a>
 <hr style="margin: 24px 0px 24px 0px;">
 </hr>
 <!-- pandoc -s --mathjax -c blog_style.css blog_2.md -o blog_2.html -->
@@ -62,7 +65,7 @@ my journey. It’s also a way to highlight some logic and math I found
 interesting and want to share, so hopefully you may learn something or
 get inspired or at the very least enjoy reading this post.</p>
 <!-- <iframe src="https://www.desmos.com/calculator/h4p3qvpni2?embed" class="frame" width="200" height="200" frameborder=0></iframe> -->
-<p><img src="../../imgs/blog_1_desmos_5_3.gif"
+<p><img src="../imgs/blog_1_desmos_5_3.gif"
 title="Animation of a five-pointed star being draw by connecting a series of points with line segments"
 alt="img_graph_small" /><br />
 </p>
@@ -74,7 +77,7 @@ class="math inline">\(\theta\)</span>. This cordinate system is actually
 super convenient for drawing something like a star, because you can kind
 of think of a star as being nice and symetrical around <span
 class="math inline">\(\theta\)</span>.</p>
-<p><img src="../../imgs/star_2_2.png" alt="img_sep" /><br />
+<p><img src="../imgs/star_2_2.png" alt="img_sep" /><br />
 </p>
 <p>The shape we want to graph with a polar expression is made up
 exclusively of straight and diagonal lines. In a star, each line is
@@ -83,13 +86,13 @@ this series of lines be graphed with a polar function?</p>
 <p>We can start with an expression for a vertical line in polar
 form:</p>
 <p><span
-class="math display">\[r=\frac{1}{\frac{1}{{\color{blue}A}}\cos(\theta)}\]</span></p>
+class="math display">\[r=\frac{1}{\frac{1}{A}\cos(\theta)}\]</span></p>
 <p>Where <span class="math inline">\(A\)</span> is the intersection with
 the x-axis.</p>
 <!-- <iframe src="https://www.desmos.com/calculator/dgjiddulgw?embed" width="400" height="400" frameborder=0></iframe> -->
 <p>And an expression for a diagonal line in polar form:</p>
 <p><span
-class="math display">\[r=\frac{1}{\frac{1}{{\color{blue}A}}\cos(\theta)+\frac{1}{{\color{orange}B}}\sin(\theta)}\]</span></p>
+class="math display">\[r=\frac{1}{\frac{1}{A}\cos(\theta)+\frac{1}{{\color{orange}B}}\sin(\theta)}\]</span></p>
 <p>Where <span class="math inline">\(A\)</span> is the intersection with
 the x-axis and <span class="math inline">\(B\)</span> is the
 intersection with the y-axis.</p>
@@ -199,7 +202,7 @@ yeilds a circle while the previous yeilds a straight line.</p>
 </blockquote>
 <iframe src="https://www.desmos.com/calculator/3mlnyu0myq?embed" width="400" height="400" frameborder="0">
 </iframe>
-<!-- ![img_graph](../../imgs/TEST8.gif)\ -->
+<!-- ![img_graph](../imgs/TEST8.gif)\ -->
 <p>Before we move to graphing multiple lines at once with an expression,
 we should touch on how these lines will be angled. For a five-pointed
 star we will need five lines. And the sum of the interior angles will be
@@ -222,8 +225,8 @@ expression? And how can we control the interior angles so that they make
 up the correctly numbered sided star? First we can employ the help of
 the modulo operator.</p>
 <p>For example, <span class="math inline">\(y=mod(x, 1)\)</span>:</p>
-<p><img src="../../imgs/blog_1_desmos_3_4.png"
-title="Graph of y=mod(x,1)" alt="img_graph" /><br />
+<p><img src="../imgs/blog_1_desmos_3_4.png" title="Graph of y=mod(x,1)"
+alt="img_graph" /><br />
 </p>
 <p>The modulo operator divides the input by a certain number and ouputs
 the remainder of that division. Notice the usual <span
@@ -233,7 +236,7 @@ would repeat every 2. We can use this in polar coordinates to achieve
 the same graph repeating effect.</p>
 <p>For example, <span
 class="math inline">\(r=mod(\theta,\frac{\pi}{2})\)</span>:</p>
-<p><img src="../../imgs/blog_1_desmos_4_2.jpg"
+<p><img src="../imgs/blog_1_desmos_4_2.jpg"
 title="Graph of r=mod(θ,π/2)" alt="img_graph" /><br />
 </p>
 <p>We can also use the modulo operator for our diagonal line
@@ -262,7 +265,7 @@ Wow! half a star! So we can see this clearly now. The star really is a series of
 yields the star I’m looking for:</p>
 <p><span
 class="math display">\[r=\frac{1}{\cos\left(\operatorname{mod}\left(\theta-\frac{\pi}{10},\frac{2\pi}{5}\right)\right)}\]</span></p>
-<p><img src="../../imgs/blog_1_desmos_6.jpg"
+<p><img src="../imgs/blog_1_desmos_6.jpg"
 title="Graph of half of a five-pointed star" alt="img_graph" /><br />
 </p>
 <p>A couple things to note: the <span
@@ -271,7 +274,7 @@ class="math inline">\(\theta\)</span> in order to rotate the star so
 it’s facing upwards correctly, and also it seems like half the star is
 missing. The graph can be flipped by multiplying the <span
 class="math inline">\(\frac{2\pi}{5}\)</span> term by -1:</p>
-<p><img src="../../imgs/blog_1_desmos_7.jpg"
+<p><img src="../imgs/blog_1_desmos_7.jpg"
 title="Graph of the other half of a five-pointed star"
 alt="img_graph" /><br />
 </p>
@@ -297,12 +300,12 @@ halfway through.</p>
 negative, or 1 to -1, we can use the floor function. The floor function
 rounds an input down to the nearest integer, for example <span
 class="math inline">\(y=floor(x)\)</span>:</p>
-<p><img src="../../imgs/blog_1_desmos_8_3.png"
-title="Graph of y=floor(x)" alt="img_graph" /><br />
+<p><img src="../imgs/blog_1_desmos_8_3.png" title="Graph of y=floor(x)"
+alt="img_graph" /><br />
 </p>
 <p>And <span class="math inline">\(y=floor(\frac{x}{\pi})\)</span>:</p>
-<p><img src="../../imgs/blog_1_desmos_9.png"
-title="Graph of y=floor(x/π)" alt="img_graph" /><br />
+<p><img src="../imgs/blog_1_desmos_9.png" title="Graph of y=floor(x/π)"
+alt="img_graph" /><br />
 </p>
 <p>The floor function always rounds the input down to the nearest
 integer, however notice we can transform the input and as a result round
@@ -335,7 +338,7 @@ value from 1 to -1, we can implement it into our original polar star
 expression, yielding a new expression defined as:</p>
 <p><span
 class="math display">\[r=\frac{1}{\cos\left(\operatorname{mod}\left(\theta-\frac{\pi}{10},\left(-1\right)^{\operatorname{floor}\left(\frac{\theta}{2\pi}\right)}\cdot\frac{2\pi}{5}\right)\right)}\]</span></p>
-<p><img src="../../imgs/blog_1_desmos_10.jpg"
+<p><img src="../imgs/blog_1_desmos_10.jpg"
 title="Graph of a five-pointed star described by a polar expression"
 alt="img_graph" /><br />
 </p>
@@ -349,7 +352,7 @@ a huge amount of things you can do with just one simple expression!) So
 with this success, I’d now like to move on to graphing a five-pointed
 star, but in the cartesian plane, that is with an expression in terms of
 x and y.</p>
-<p><img src="../../imgs/star_2_2.png" alt="img_sep" /><br />
+<p><img src="../imgs/star_2_2.png" alt="img_sep" /><br />
 </p>
 <p>My strategy for graphing a five-pointed star with x and y is to use a
 parametric equation. Something like <span class="math inline">\(f(x(t),
@@ -359,7 +362,7 @@ correct equation, this would yeild a five-pointed star shape. To draw
 out the star, the dot has to kind of go back and forth in both its x and
 y axes. Considering this I defined functions for both x and y. They look
 like this:</p>
-<p><img src="../../imgs/blog_1_desmos_13_2.png"
+<p><img src="../imgs/blog_1_desmos_13_2.png"
 title="Graph of the x and y components with respect to time of a parametric function that draws out a five-pointed star"
 alt="img_graph" /><br />
 </p>
@@ -371,7 +374,7 @@ previous polar expressions. I also multiplied x by the sign switching
 term also in the previous polar expressions. This yeilds a function:</p>
 <p><span
 class="math display">\[y=\operatorname{mod}\left(x\cdot\left(-1\right)^{\operatorname{floor}\left(x\right)},1\right)\]</span></p>
-<p><img src="../../imgs/blog_1_desmos_11.png"
+<p><img src="../imgs/blog_1_desmos_11.png"
 title="Graph of a zigzag line" alt="img_graph" /><br />
 </p>
 <p>The mod term is the same used in the previous polar expressions, used
@@ -389,11 +392,10 @@ y peicewise function with respect to time. The point’s position could be
 expressed in the form: <span class="math inline">\(f(x(t),
 y(t))\)</span>. So the movement of the point overtime would looke
 like:</p>
-<p><img src="../../imgs/blog_1_desmos_15_5.gif" alt="img_graph" /><br />
+<p><img src="../imgs/blog_1_desmos_15_5.gif" alt="img_graph" /><br />
 </p>
 <p>Adding a trail to show its path:</p>
-<p><img src="../../imgs/blog_1_desmos_16_31.gif"
-alt="img_graph" /><br />
+<p><img src="../imgs/blog_1_desmos_16_31.gif" alt="img_graph" /><br />
 </p>
 <p>And you can probably see the reason why part of the y peicewise
 function was flat, it’s because during that time, the dot is drawing the
@@ -406,7 +408,7 @@ position moves on overtime, reveals the star. Next I’d like to describe
 another method of drawing a five-pointed star, this more focused on
 interior and exterior angles. This method involves creating a list of
 points, then connecting them with line segments, forming a star.</p>
-<p><img src="../../imgs/star_2_2.png" alt="img_sep" /><br />
+<p><img src="../imgs/star_2_2.png" alt="img_sep" /><br />
 </p>
 <p>Let’s describe the shape of a star in a different way than what we’ve
 done up until now. Say instead of represtenting the star, or any shape,
