@@ -21,6 +21,8 @@
 body {
 	/*font: Lucida Console*/
 	font-family: "Lucida Console";
+	font-weight: normal;
+	font-style: normal;
 	color: #272833;
 	background-image: url("imgs\\bg_6_min_2.jpg");
 	background-repeat: repeat-y;
@@ -178,7 +180,7 @@ p {
 }
 
 span {
-	font-size: calc(1rem - 1px);
+	line-height: 1em;
 }
 
 #software-list {
