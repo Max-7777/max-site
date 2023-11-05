@@ -6,6 +6,10 @@ html {
   background-size: 100% auto;
 }
 
+header {
+	display: none;
+}
+
 body {
   color: #272833;
   border: 3px groove #c8d2e0;
