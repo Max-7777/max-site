@@ -11,7 +11,7 @@ title: "Blog #2 Functions for Stars and Polygons"
 <a class="link" style="" href="../software.html">Software</a>
 <span id="Games" style="width: 5px; display: inline-block;"></span>
 <a class="link" style="" href="../games.html">Games</a>
-<span id="Photography" style="width: 5px; display: inline-block;"></span>
+<span id="Photography" class="link-nonactive"></span>
 <a style="">Photography</a>
 <span id="CV" style="width: 5px; display: inline-block;"></span>
 <a class="link" style="" href="../cv.html">CV</a>
@@ -22,7 +22,7 @@ title: "Blog #2 Functions for Stars and Polygons"
 
 Published: October 28, 2023
 
-Another blog I'm writing on my new personal website... yay !! This blog is entitled 'Functions for Stars and Polygons.' I started this a while back with the vague goal of graphing a five-pointed star with a function. Any function really, but it had to draw out a star. There are many methods of going about this type of thing, using polar functions, parametric functions, or other techniques that aren't even functions (which I end up using as well.) This blog post serves as an outline of my journey. It's also a way to highlight some logic and math I found interesting and want to share, so hopefully you may learn something or get inspired or at the very least enjoy reading this post.
+Another blog I'm writing on my new personal website... yay !! This blog is entitled 'Functions for Stars and Polygons.' I started this a while back with the vague goal of graphing a five-pointed star with a function. Any function really, but it had to draw out a star. There are many methods of going about this type of thing; you could use polar functions, parametric functions, or other techniques that aren't even functions (which I end up doing too.) This blog post serves as an outline of my journey. It's also a way to highlight some logic and math I found interesting and want to share, so hopefully you may learn something or get inspired or at the very least enjoy reading this post.
 
 
 <!-- <iframe src="https://www.desmos.com/calculator/h4p3qvpni2?embed" class="frame" width="200" height="200" frameborder=0></iframe> -->
@@ -32,11 +32,11 @@ Another blog I'm writing on my new personal website... yay !! This blog is entit
 <!-- `<img style="width: 200px;" src="../imgs/blog_1_desmos_1_3_2.webp" onerror="this.onerror = null; this.src = '../imgs/blog_1_desmos_1_2.gif'">`{=html} -->
 
 
-I'm going to start with a way to graph a star with a polar function. A polar function is a function defined in polar cordinates, described by a radius $r$ and an angle theta $\theta$. This cordinate system is actually super convenient for drawing something like a star, because you can kind of think of a star as being nice and symetrical around $\theta$.
+I'm going to start with a way to graph a star with a polar function. A polar function is a function defined in polar cordinates, described by a radius $r$ and an angle $\theta$. The polar coordinate system is actually super convenient for drawing something like a star, because you can kind of think of a star as being nice and symetrical around $\theta$. Which in theory should make it nice and easy to find a function for.
 
 ![img_sep](../imgs/star_2_2.png)\
 
-The shape we want to graph with a polar expression is made up exclusively of straight and diagonal lines. In a star, each line is angled in such a way that they connect and form five sided. So how can this series of lines be graphed with a polar function?
+The shape we're looking to graph, a five-pointed star, is made up exclusively of straight and diagonal lines. Each line is angled and positioned in such a way that they connect and form five sides of a star. How can this pattern of diagonal lines be graphed with a polar function?
 
 We can start with an expression for a vertical line in polar form:
  
@@ -97,11 +97,11 @@ Where $A$ is the intersection with the x-axis and $B$ is the intersection with t
 -->
 <iframe src="https://www.desmos.com/calculator/wuuukjxqdc?embed" width="400" height="400" frameborder=0></iframe>
 
-So why does this expression take this form? There's a $\cos(\theta)$ and a $\sin(\theta)$ and they're in the denominator. Seems like this somehow relates to $\sec(\theta)$ and $\csc(\theta)$. This relationship does make sense, since $r=\sec(\theta)$ results in a vertical line and $r=\csc(\theta)$ results in a horizontal line. Naturally combining the two would make a diagonal line.
+Why does this expression take this form? There's a $\cos(\theta)$ and a $\sin(\theta)$ and they're in the denominator. Seems like this somehow relates to $\sec(\theta)$ and $\csc(\theta)$. This relationship does make sense, since $r=\sec(\theta)$ results in a vertical line and $r=\csc(\theta)$ results in a horizontal line. Naturally combining the two into one expression would make a diagonal line.
 
->On a side note, something kind of interesting with the diagonal line expression is its behaviour when $A$ or $B$ change. For example, as say $B$ increases, the $\sin(\theta)$ term loses magnitude. As $B$ approaches $\infty$, the $\frac{1}{B}\sin(\theta)$ term approaches $\frac{1}{\infty}\sin(\theta)$ or $0\sin(\theta)$. This results in the expression turning into the expression for a vertical line: $\frac{1}{\frac{1}{A}\cos(\theta)}$. This is also reflected in the graph. As $B$ approaches $\infty$ the slope increases making the graph approach a vertical line. Also notice how it's impossible to graph either a horizontal or vertical line with the diagonal line expression if you try to do the opposite and make A or B 0 instead of $\infty$. A and B being in the denominator means if they are in fact 0, then the graph is undefined.
+>On a side note, something kind of interesting with the diagonal line expression is its behaviour when $A$ or $B$ change. For example, as say $B$ increases, the $\sin(\theta)$ term loses magnitude. As $B$ goes all the way out to $\infty$, the $\frac{1}{B}\sin(\theta)$ term approaches $\frac{1}{\infty}\sin(\theta)$ or $0\sin(\theta)$. This results in the expression losing $sin(\theta)$ and turning into the expression for a vertical line: $\frac{1}{\frac{1}{A}\cos(\theta)}$. This is also reflected in the graph. As $B$ approaches $\infty$ the slope increases making the graph approach a vertical line. Also notice how it's impossible to graph either a horizontal or vertical line if you try to do the opposite and make A or B 0 instead of $\infty$. A and B being in the denominator means if they are in fact 0, then the graph is undefined.
 
->On another side note, the reciprocal of this diagonal line function, $r=A\cos(\theta)+B\sin(\theta)$, results in a similar looking graph, but also something slightly different:
+>On another side note, the reciprocal of this diagonal line expression, $r=A\cos(\theta)+B\sin(\theta)$, results in a similar looking graph, but also something slightly different:
 
 <!-- <iframe src="https://www.desmos.com/calculator/r1xqwjf82z?embed" width="400" height="400" frameborder=0></iframe> -->
 <iframe src="https://www.desmos.com/calculator/wh0nlvutcf?embed" width="400" height="400" frameborder=0></iframe>

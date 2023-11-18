@@ -217,6 +217,11 @@ img[alt=img_graph_small]{
 iframe {
 }
 
+.link, .link-nonactive {
+	margin-left: 0.2rem;
+	margin-right: 0.7rem;
+}
+
 span {
 	font-size: calc(1rem - 1px);
 }
