@@ -38,6 +38,16 @@
 	src: url('fonts\\Baginda.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: "Arimo";
+	src: url("fonts/Arimo.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Lucida Console";
+	src: url("fonts/Lucida Console.ttf") format("truetype");
+}
+
 body {
 	/*font: Lucida Console*/
 	font-family: "Lucida Console";
@@ -95,7 +105,7 @@ p {
 
 .content-box {
 	background: #f5f5f7;
-	max-width: 950px;
+	max-width: 900px;
 	margin: 50px auto 50px auto;
 	padding: 50px;
 	border: 3px groove #afc8ed;
