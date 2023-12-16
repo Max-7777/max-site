@@ -1,0 +1,314 @@
+html {
+  color: #1a1a1a;
+  background-color: #e6edf2;
+  background-image: url("../imgs/blog_bg_5.jpg");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+}
+
+header {
+	display: none;
+}
+
+body {
+  color: #272833;
+  border: 3px groove #c8d2e0;
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 850px;
+  padding: 2.5rem 1.75rem 2.5rem 1.75rem;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-family: "Lucida Console";
+}
+
+@media (max-width: 600px) {
+  body {
+	font-size: 0.9em;
+	padding: 12px;
+  }
+  h1 {
+	font-size: 1.8em;
+  }
+}
+
+@media print {
+  html {
+	background-color: white;
+  }
+  body {
+	background-color: transparent;
+	color: black;
+	font-size: 12pt;
+  }
+  p, h2, h3 {
+	orphans: 3;
+	widows: 3;
+  }
+  h2, h3, h4 {
+	page-break-after: avoid;
+  }
+}
+
+p {
+  margin: 2em 0;
+  line-height: 1.7em;
+  color: #616378; 
+}
+
+ul {
+  line-height: 1.7em;
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
+h1 {
+  color: #616378; 
+  margin-top: 1em;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #616378; 
+  margin-top: 1.4em;
+}
+
+h5, h6 {
+  font-size: 1em;
+  font-style: italic;
+}
+
+h6 {
+  font-weight: normal;
+}
+
+ol, ul {
+  padding-left: 1.7em;
+  margin-top: 1em;
+}
+
+li > ol, li > ul {
+  margin-top: 0;
+}
+
+blockquote {
+  margin: 1em 3em 1em 3em;
+  padding: 0em 1.5em 0em 1.5em;
+  color: #606060;
+  background-color: #f7f7f7;
+}
+
+code {
+  font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+  font-size: 85%;
+  margin: 0;
+  hyphens: manual;
+}
+
+pre {
+  margin: 1em 0;
+  overflow: auto;
+}
+
+pre code {
+  padding: 0;
+  overflow: visible;
+  overflow-wrap: normal;
+}
+
+.sourceCode {
+ background-color: transparent;
+ overflow: visible;
+}
+
+hr {
+  background-color: #1a1a1a;
+  border: none;
+  height: 1px;
+  margin: 1em 0;
+}
+
+table {
+  margin: 1em 0;
+  border-collapse: collapse;
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+table caption {
+  margin-bottom: 0.75em;
+}
+
+tbody {
+  margin-top: 0.5em;
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+th {
+  border-top: 1px solid #1a1a1a;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+}
+
+td {
+  padding: 0.125em 0.5em 0.25em 0.5em;
+}
+
+header {
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+#TOC li {
+  list-style: none;
+}
+
+#TOC ul {
+  padding-left: 1.3em;
+}
+
+#TOC > ul {
+  padding-left: 0;
+}
+
+#TOC a:not(:hover) {
+  text-decoration: none;
+}
+
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+/* The extra [class] is a hack that increases specificity enough to
+   override a similar rule in reveal.js */
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  font-size: inherit;
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+img[alt=img_sep] {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 8rem;
+	margin-bottom: 6rem;
+	width: 40px;
+	display: block;
+}
+
+img[alt=img_graph]{
+	width: auto;
+	height: 300px;
+}
+
+img[alt=img_graph_small]{
+	width: auto;
+	height: 250px;
+}
+
+iframe {
+	margin: 1em 0 1em 0;
+}
+
+.link, .link-nonactive {
+	margin-left: -0.1rem;
+	margin-right: 0.8rem;
+}
+
+.link-nonactive {
+	color: #616378;
+}
+
+#Index, #Blog, #Software, #Games, #Resume, #Photography {
+	color: #616378;
+	width: 1rem;
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 0.1rem 0 0 0;
+	transform-origin: center center;
+	user-select: none; 
+	line-height: 0.9rem;
+}
+
+span {
+	font-size: calc(1rem - 1px);
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a, a:visited {
+	color: #6c6ed9;
+}
+
+.nav-links {
+	margin-left: 1rem;
+	/* background-color: black; */
+	overflow: hidden;
+	height: 1rem;
+	display: flex;
+}
+
+.nav-item {
+	display: flex;
+	/* background-color: blue; */
+	margin-right: 1.25rem;
+	align-items: center;
+}
+
+.nav-icon {
+	/* background-color: yellow; */
+	margin-right: 0.5rem;
+	width: 0.85rem;
+	height: 0.85rem;
+	display: inline-block;
+	vertical-align: middle;
+	transform: scale(0);
+	/*
+	background: url("rotate.png") 0 0 no-repeat;
+	background-size: 100%;
+	background-position: center;
+	*/
+	/*text-align: center;*/
+}
+
+#nav-img {
+	/*
+	display: inline-block;
+	vertical-align: middle;*/
+	margin: auto;
+	width: 0.85rem;
+}
+
+#Index, #Blog, #Software, #Games, #Resume, #Photography {
+	transform-origin: center center;
+	user-select: none;      
+}
+
+img[src*="#pfj_image"] {
+	width: 450px;
+	height: auto;
+}
+
+img[src*="#pfj_image_2"] {
+	width: 250px;
+	height: auto;
+}
+

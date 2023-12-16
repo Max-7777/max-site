@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Blog #1 PFJ Image Editor</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="blog_style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Blog #1 PFJ Image Editor</h1>
+</header>
+<script src="../script.js"></script>
+<p><a href="../blogs.html">← blogs</a></p>
+<!-- pandoc -s --mathjax -c blog_style.css blog_1.md -o blog_1.html -->
+<h1 id="post-1-pfj-image-editor">Post #1: PFJ Image Editor</h1>
+<p>Published: June 30, 2023</p>
+<p><img src="../imgs\pfj_gif.gif#pfj_image"
+title="Me adding filters to an image"
+alt="A gif of me adding filters to an image using PFJ Image Editor" /><br />
+</p>
+<p>Hello! In this blog post I wanted to talk a bit about an image editor
+software program that I made recently, mainly what it does and my
+motivation behind developing it. Basically with this program, PFJ Image
+Editor, you’re able to apply different filters and effects to images.
+For example, you can apply brightness, contrast, saturation, mirroring,
+threshold etc.. You’re able to control the intensity of each filter and
+you can apply multiple filters on an image at once if you want. There’s
+also some presets you can use that have preset values for the effects.
+It’s pretty easy to create cool looking edits of images this way. You’re
+also able to analyze the image, like looking at how the color channels
+of the image are distributed using a histogram plot. This way you can
+see how different filters alter an image’s pixel values in real
+time.</p>
+<p>Back in April or May, we had a unit on pixels and image filters in my
+computer science class. We did some assignments like coding our own
+effects and seeing how they’d affect images. Stuff like brightness,
+grayscale, isolating color channels. We actually used software made in
+Java to analyze and display the images and filters we made. I’m pretty
+sure the software used Java’s Swing API for graphics and GUI. There was
+lots of Java style sliders, buttons, text fields, scroll bars, things
+like that. I was really inspired by this program, (especially because we
+had the source code in Java and were able to see how it worked!), so I
+decided to make my own image editing program, although not using Java
+Swing but another graphics library called Processing.</p>
+<p><img src="../imgs/sunflower.png#pfj_image_2"
+title="An image of a sunflower with various filters applied"
+alt="An Image of a sunflower with various filters applied" /><br />
+</p>
+<p>Probably the hardest part of development was finding a way to apply
+filters to an image without causing a massive FPS drop. Some filters are
+more preformance intensive than others. For example, brightness and
+threshold aren’t too bad, but bloom and blur can be pretty slow
+depending on their intensity. My goal was to have the filter “load in”
+and take its time, as opposed to craming in all the calculations into a
+single frame and causing a massive lag spike. Sometimes you may see the
+image take a few moments to apply all its filters completely, this is to
+insure a constant and smooth FPS! Besides that I also spent some time
+messing around with all the combinations of filters with images and
+making presets. It was actually really fun. I’d say my favorite filters
+to use are bloom and a combination of color threshold and mirroring. I
+also find the effects look especially cool on a nature type image with
+trees and the sky and clouds with lots of contrasting colors.</p>
+<p>Anyway that’s a quick summary of what the software is and why I made
+it. As always if you have questions or feedback please contact me at: <a
+href="mailto:maxcontact5@keemail.me">maxcontact5@keemail.me</a> and if
+you’re interested in downloading or learning more, check the github
+here: <a href="https://github.com/Max-7777/PFJ-image-editor">PFJ Image
+Editor Repo</a>. Thanks for reading!</p>
+</body>
+</html>
