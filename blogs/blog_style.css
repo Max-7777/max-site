@@ -17,8 +17,8 @@ body {
   background-color: #fff;
   margin: 0 auto;
   margin-top: 50px;
-  width: 900px;
-  padding: 50px;
+  width: 850px;
+  padding: 2.5rem 1.75rem 2.5rem 1.75rem;
   hyphens: auto;
   overflow-wrap: break-word;
   text-rendering: optimizeLegibility;
@@ -56,8 +56,12 @@ body {
 
 p {
   margin: 2em 0;
-  line-height: 24px;
+  line-height: 1.7em;
   color: #616378; 
+}
+
+ul {
+  line-height: 1.7em;
 }
 
 img {
@@ -69,7 +73,12 @@ svg {
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  color: #616378; 
+  margin-top: 1em;
+}
+
+h2, h3, h4, h5, h6 {
   color: #616378; 
   margin-top: 1.4em;
 }
@@ -93,9 +102,8 @@ li > ol, li > ul {
 }
 
 blockquote {
-  margin: 1em 0 1em 3em;
-  padding-left: 1em;
-  border-left: 2px solid #b5b5b5;
+  margin: 1em 3em 1em 3em;
+  padding: 0em 1.5em 0em 1.5em;
   color: #606060;
   background-color: #f7f7f7;
 }
@@ -198,8 +206,8 @@ ul.task-list li input[type="checkbox"] {
 img[alt=img_sep] {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 90px;
-	margin-bottom: 40px;
+	margin-top: 8rem;
+	margin-bottom: 6rem;
 	width: 40px;
 	display: block;
 }
@@ -215,11 +223,27 @@ img[alt=img_graph_small]{
 }
 
 iframe {
+	margin: 1em 0 1em 0;
 }
 
 .link, .link-nonactive {
-	margin-left: 0.2rem;
-	margin-right: 0.7rem;
+	margin-left: -0.1rem;
+	margin-right: 0.8rem;
+}
+
+.link-nonactive {
+	color: #616378;
+}
+
+#Index, #Blog, #Software, #Games, #Resume, #Photography {
+	color: #616378;
+	width: 1rem;
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 0.1rem 0 0 0;
+	transform-origin: center center;
+	user-select: none; 
+	line-height: 0.9rem;
 }
 
 span {
@@ -228,6 +252,54 @@ span {
 
 a:hover {
 	text-decoration: none;
+}
+
+a, a:visited {
+	color: #6c6ed9;
+}
+
+.nav-links {
+	margin-left: 1rem;
+	/* background-color: black; */
+	overflow: hidden;
+	height: 1rem;
+	display: flex;
+}
+
+.nav-item {
+	display: flex;
+	/* background-color: blue; */
+	margin-right: 1.25rem;
+	align-items: center;
+}
+
+.nav-icon {
+	/* background-color: yellow; */
+	margin-right: 0.5rem;
+	width: 0.85rem;
+	height: 0.85rem;
+	display: inline-block;
+	vertical-align: middle;
+	transform: scale(0);
+	/*
+	background: url("rotate.png") 0 0 no-repeat;
+	background-size: 100%;
+	background-position: center;
+	*/
+	/*text-align: center;*/
+}
+
+#nav-img {
+	/*
+	display: inline-block;
+	vertical-align: middle;*/
+	margin: auto;
+	width: 0.85rem;
+}
+
+#Index, #Blog, #Software, #Games, #Resume, #Photography {
+	transform-origin: center center;
+	user-select: none;      
 }
 
 img[src*="#pfj_image"] {
@@ -239,3 +311,4 @@ img[src*="#pfj_image_2"] {
 	width: 250px;
 	height: auto;
 }
+

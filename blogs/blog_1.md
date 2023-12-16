@@ -2,20 +2,7 @@
 title: "Blog #1 PFJ Image Editor"
 ---
 <script src="../script.js"></script>
-<a style="font-size: calc(1rem + 4px); visibility: hidden; margin-left: -25px;">✧</a>
-<span id="Index" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../index.html">Index</a>
-<span id="Blog" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../blogs.html">Blog</a>
-<span id="Software" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../software.html">Software</a>
-<span id="Games" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../games.html">Games</a>
-<span id="Photography" class="link-nonactive"></span>
-<a style="">Photography</a>
-<span id="CV" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../cv.html">CV</a>
-<hr style="margin: 24px 0px 24px 0px;"></hr>
+<a href="../blogs.html">← blogs</a>
 
 <!-- pandoc -s --mathjax -c blog_style.css blog_1.md -o blog_1.html -->
 # Post \#1: PFJ Image Editor

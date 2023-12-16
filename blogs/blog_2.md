@@ -2,20 +2,7 @@
 title: "Blog #2 Functions for Stars and Polygons"
 ---
 <script src="../script.js"></script>
-<a style="font-size: calc(1rem + 4px); visibility: hidden; margin-left: -25px;">✧</a>
-<span id="Index" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../index.html">Index</a>
-<span id="Blog" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../blogs.html">Blog</a>
-<span id="Software" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../software.html">Software</a>
-<span id="Games" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../games.html">Games</a>
-<span id="Photography" class="link-nonactive"></span>
-<a style="">Photography</a>
-<span id="CV" style="width: 5px; display: inline-block;"></span>
-<a class="link" style="" href="../cv.html">CV</a>
-<hr style="margin: 24px 0px 24px 0px;"></hr>
+<a href="../blogs.html">← blogs</a>
 <!-- pandoc -s --mathjax -c blog_style.css blog_2.md -o blog_2.html -->
 
 # Post \#2: Functions for Stars and Polygons
@@ -23,7 +10,6 @@ title: "Blog #2 Functions for Stars and Polygons"
 Published: October 28, 2023
 
 Another blog I'm writing on my new personal website... yay !! This blog is entitled 'Functions for Stars and Polygons.' I started this a while back with the vague goal of graphing a five-pointed star with a function. Any function really, but it had to draw out a star. There are many methods of going about this type of thing; you could use polar functions, parametric functions, or other techniques that aren't even functions (which I end up doing too.) This blog post serves as an outline of my journey. It's also a way to highlight some logic and math I found interesting and want to share, so hopefully you may learn something or get inspired or at the very least enjoy reading this post.
-
 
 <!-- <iframe src="https://www.desmos.com/calculator/h4p3qvpni2?embed" class="frame" width="200" height="200" frameborder=0></iframe> -->
 
@@ -95,16 +81,16 @@ Where $A$ is the intersection with the x-axis and $B$ is the intersection with t
 <iframe src="https://www.desmos.com/calculator/jyu5vptm2b?embed" width="400" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
 <iframe src="https://www.desmos.com/calculator/chcdexaszm?embed" width="400" height="400" frameborder=0></iframe>
 -->
-<iframe src="https://www.desmos.com/calculator/wuuukjxqdc?embed" width="400" height="400" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/wuuukjxqdc?embed" width="430" height="430" frameborder=0></iframe>
 
 Why does this expression take this form? There's a $\cos(\theta)$ and a $\sin(\theta)$ and they're in the denominator. Seems like this somehow relates to $\sec(\theta)$ and $\csc(\theta)$. This relationship does make sense, since $r=\sec(\theta)$ results in a vertical line and $r=\csc(\theta)$ results in a horizontal line. Naturally combining the two into one expression would make a diagonal line.
 
->On a side note, something kind of interesting with the diagonal line expression is its behaviour when $A$ or $B$ change. For example, as say $B$ increases, the $\sin(\theta)$ term loses magnitude. As $B$ goes all the way out to $\infty$, the $\frac{1}{B}\sin(\theta)$ term approaches $\frac{1}{\infty}\sin(\theta)$ or $0\sin(\theta)$. This results in the expression losing $sin(\theta)$ and turning into the expression for a vertical line: $\frac{1}{\frac{1}{A}\cos(\theta)}$. This is also reflected in the graph. As $B$ approaches $\infty$ the slope increases making the graph approach a vertical line. Also notice how it's impossible to graph either a horizontal or vertical line if you try to do the opposite and make A or B 0 instead of $\infty$. A and B being in the denominator means if they are in fact 0, then the graph is undefined.
+>On a side note, something kind of interesting with the diagonal line expression is its behaviour when $A$ or $B$ change. For example, as say $B$ increases, the $\sin(\theta)$ term loses magnitude. As $B$ goes all the way out to $\infty$, the $\frac{1}{B}\sin(\theta)$ term approaches $\frac{1}{\infty}\sin(\theta)$ or $0\sin(\theta)$. This results in the expression losing $sin(\theta)$ and turning into the expression for a vertical line: $\frac{1}{\frac{1}{A}\cos(\theta)}$. This is also reflected in the graph. As $B$ approaches $\infty$ the slope increases making the graph approach a vertical line. 
 
 >On another side note, the reciprocal of this diagonal line expression, $r=A\cos(\theta)+B\sin(\theta)$, results in a similar looking graph, but also something slightly different:
 
 <!-- <iframe src="https://www.desmos.com/calculator/r1xqwjf82z?embed" width="400" height="400" frameborder=0></iframe> -->
-<iframe src="https://www.desmos.com/calculator/wh0nlvutcf?embed" width="400" height="400" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/wh0nlvutcf?embed" width="430" height="430" frameborder=0></iframe>
 
 >For $r=A\cos(\theta)+B\sin(\theta)$ when $\theta=0$, the radius only depends on the value of $\cos(\theta)$. When $\theta=\frac{\pi}{2}$ the radius only depends on the value of $\sin(\theta)$. Putting coeffeicents before the terms allows us to control the x-axis and y-axis intersections of the circle. In the above graph, the coefficent of cos is held constant at 1, so there's an intersection at (1, 0). The coefficent of sin can change so there's an intersection at (0, value of the coefficent of sin). This expression is similar to the expression of the diagonal line, the coeffeicents of cos and sin can be changed to control the x-axis and y-axis intersections respectively. The difference is this expression yeilds a circle while the previous yeilds a straight line.
 
@@ -137,7 +123,7 @@ We can also use the modulo operator for our diagonal line expression:
 <iframe src="https://www.desmos.com/calculator/svo8obioul?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 <iframe src="https://www.desmos.com/calculator/d465l4m6mz?embed" width="450" height="450" frameborder=0></iframe>
 -->
-<iframe src="https://www.desmos.com/calculator/qkvymv5g6m?embed" width="450" height="450" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/qkvymv5g6m?embed" width="430" height="430" frameborder=0></iframe>
 <!-- <iframe src="https://www.desmos.com/calculator/kq9yd7w2sb?embed" width="500" height="500" frameborder=0></iframe> -->
 
 Where $Z$ is the interval $\theta$ the function repeats on.
@@ -213,7 +199,7 @@ Let's describe the shape of a star in a different way than what we've done up un
 
 For example, a square could be represented by four vectors and each vector's angle would be $90\textdegree$ greater than the previous. Adding all the angles of the four vectors together that describe the sides of the square yeilds $360\textdegree$ ($4\times90\textdegree$.) or a full rotation. This makes sense because the vectors should create a full shape, in other words the sides of the shape start where they end, making one full rotation. If the angles of the four vectors were smaller or larger, they wouldn't be able to connect to make a square. Another example, the sides of an isosceles triangle. A vector's angle in this case would be $120\textdegree$ greater than the previous vector. Again the angles of the three vectors that make up the sides of the traingle sum to $360\textdegree$. We can alter the difference in angles between the vectors, in other words the exterior angles, to create a huge amount of different shapes.
 
-<iframe src="https://www.desmos.com/calculator/9noexzltrw?embed" width="450" height="450" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/9noexzltrw?embed" width="430" height="430" frameborder=0></iframe>
 
 Notice how any sided polygons can be made with the vectors if there are enough. Also at a certain point (depending on the number of vectors) the sides of the shape will rotated around a second time. This is what creates the five sided star shape. Specifically when the exterior angles are $\frac{4\pi}{5}$ and $\frac{6\pi}{5}$ radians or $144\textdegree$ and $216\textdegree$. Depending on the number of vectors, or sides you have, any star or polygon can be made by changing its exterior angles!
 
