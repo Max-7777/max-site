@@ -10,6 +10,8 @@ let selector_interval = 150;
 let pt_2 = Date.now();
 let selected_element = null;
 let selected_element_inner_html = null;
+let p_selected = false;
+let test = 0;
 
 window.addEventListener('DOMContentLoaded', () => {
 	/*
@@ -71,19 +73,20 @@ window.addEventListener('DOMContentLoaded', () => {
 	face_elem = document.getElementById("face");
 	if (face_elem) {
 		face_elem.addEventListener("mouseover", (event) => {
-			event.target.innerHTML = "(ಠಿ_ಠ)";
+			event.target.innerHTML = "(0_0)";
+			localStorage.setItem("disturbed-the-smiley", "true");
 		});
 		
 		face_elem.addEventListener("mouseout", (event) => {
-			event.target.innerHTML = "(^​_^)";
+			event.target.innerHTML = "(ಠಿ_ಠ)";
 		});
 		
 		face_elem.addEventListener("mousedown", (event) => {
-			event.target.innerHTML = "(0_0)";
+			event.target.innerHTML = "(^​_^)";
 		});
 		
 		face_elem.addEventListener("mouseup", (event) => {
-			event.target.innerHTML = "(ಠಿ_ಠ)";
+			event.target.innerHTML = "(0_0)";
 		});
 	}
 	
@@ -92,10 +95,10 @@ window.addEventListener('DOMContentLoaded', () => {
 	}));
 	
 	document.querySelectorAll(".link").forEach((e) => e.addEventListener("mouseout", (event) => {
-		selected_element.innerHTML = "";
+		selected_element.style.transform = "scale(0)";
 		selected_element = null;
 	}));
-	
+		
 	update_button_loops();
 	update_selector_loop();
 });
@@ -112,6 +115,8 @@ function update_button_loops() {
 	setTimeout(update_button_loops, 1);
 }
 
+/*
+
 function update_selector_loop() {
 	if (selected_element != null) {
 		selected_element.innerHTML = selector; 
@@ -125,4 +130,36 @@ function update_selector_loop() {
 	}
 	
 	setTimeout(update_selector_loop, 1);
+}
+
+*/
+
+function update_selector_loop() {
+	
+	if (selected_element != null) {
+		if (!p_selected) {
+			p_selected = true;
+			//selected_element.innerHTML = selector; 
+			pt_2 = Date.now();
+			selected_element.style.transform = "rotate(0deg)";
+		}
+		let t = Date.now() - pt_2;
+		
+		selected_element.style.transform = "scale(" + String((t < 500) ? 1 - Math.pow(2, -10 * t/300) : 1) + ") " + "rotate(" + String(t/1.5) + "deg)";
+		selected_element.style.transformOrigin = "center center";
+	} else {
+		p_selected = false;
+	}
+	
+	
+	/*
+	
+	test += 10;
+	let t = test;
+		
+	//document.getElementsByClassName("nav-icon")[0].style.transform = "scale(" + String((t < 500) ? 1 - Math.pow(2, -10 * t/500) : 1) + ") " + "rotate(" + String(t/2) + "deg)";
+	document.getElementsByClassName("nav-icon")[0].style.transform = "rotate(" + String(t) + "deg)";
+	//document.getElementsByClassName("nav-icon")[0].style.transformOrigin = "center";
+	*/
+	setTimeout(update_selector_loop, 10);
 }

@@ -94,22 +94,22 @@ h1 {
 	font-weight: normal;
 	color: #616378;
 	margin: 0px;
-	font-size: 2.5rem;
+	font-size: 2rem;
 }
 
 p {
-	line-height: 1.5em;
+	line-height: 1.6em;
 	color: #616378; 
 	margin: 0px 0px 0px 0px;	
 }
 
 .content-box {
 	background: #f5f5f7;
-	max-width: 900px;
+	width: 850px;
 	margin: 50px auto 50px auto;
-	padding: 50px;
+	padding: 2.5rem 1.75rem 2.5rem 1.75rem;
 	border: 3px groove #afc8ed;
-	box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+	box-shadow: 0px 10px 16px rgba(0,0,0,0.4);
 }
 
 .nav-buttons {
@@ -144,12 +144,6 @@ p {
 	color: #9fa1b3; 
 }
 
-.nav-links {
-	overflow: hidden;
-	margin-top: 10px;
-	height: 1.2em;
-}
-
 .tree {
 	user-drag: none; 
 	user-select: none;
@@ -176,9 +170,9 @@ p {
 	margin-right: auto;
 	width: 700px;
 	height: auto;
-	margin: 150px;
+	margin: 50px;
 	position: relative;
-	top: -130px;
+	top: -20px;
 	left: -100px;
 }
 
@@ -188,7 +182,7 @@ p {
 	width: 700px;
 	height: auto;
 	position: relative;
-	top: -250px;
+	top: -50px;
 }
 
 #tree-3 {
@@ -200,19 +194,88 @@ p {
 	top: -120px;
 }
 
-#Index, #Blog, #Software, #Games, #CV, #Photography {
-	width: 0.4rem;
+.nav-links {
+	margin-left: 1rem;
+	/* background-color: black; */
+	overflow: hidden;
+	height: 1rem;
+	display: flex;
+}
+
+.nav-item {
+	display: flex;
+	/* background-color: blue; */
+	margin-right: 1.25rem;
+	align-items: center;
+}
+
+.nav-icon {
+	/* background-color: yellow; */
+	margin-right: 0.5rem;
+	width: 0.85rem;
+	height: 0.85rem;
 	display: inline-block;
-	margin-right: 0rem;
+	vertical-align: middle;
+	transform: scale(0);
+	/*
+	background: url("rotate.png") 0 0 no-repeat;
+	background-size: 100%;
+	background-position: center;
+	*/
+	/*text-align: center;*/
+}
+
+#nav-img {
+	/*
+	display: inline-block;
+	vertical-align: middle;*/
+	margin: auto;
+	width: 0.85rem;
+}
+
+/*
+.nav-icon-icon {
+	line-height: 1em;
+	margin-top: calc(-1em / 8);
+	width: 1rem;
+	height: 1rem;
+	font-size: 1em;
+}
+*/
+
+.nav-text {
+	/*background-color: blue;*/
+}
+
+/*
+#Index, #Blog, #Software, #Games, #Resume, #Photography {
+	color: #616378;
+	width: 1rem;
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 0.1rem 0 0 0;
+	transform-origin: center center;
+	user-select: none;      
+}
+*/
+
+#Index, #Blog, #Software, #Games, #Resume, #Photography {
+	transform-origin: center center;
+	user-select: none;      
 }
 
 .link, .link-nonactive {
-	margin-left: 0.2rem;
-	margin-right: 0.7rem;
+	margin-left: -0.1rem;
+	margin-right: 0.8rem;
+}
+
+.link-nonactive {
+	color: #616378;
 }
 
 span {
-	line-height: 1em;
+	line-height: 0.7rem;
+	padding-top: 0.1rem;
 }
 
 #software-list {
@@ -232,9 +295,9 @@ span {
 }
 
 .software-list-item-text {
-	color: #616378;
+	width: 76%;
+	color: #616378 !important;
 	text-decoration: none;
-	width: 70%;
 	padding: 1.5rem;
 	position: relative;
 }
@@ -256,9 +319,15 @@ span {
 	height: auto;
 }
 
+.software-list-item-image-container {
+	width: 24%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
 .software-list-item-image {
-	width: 300px;
-	margin-left: 5%;
+	height: 12rem;
 }
 
 .software-list-item-date {
@@ -290,7 +359,7 @@ span {
 .blog-list-item-text {
 	width: 73%;
 	position: relative;
-	color: #616378;
+	color: #616378 !important;
 	text-decoration: none;
 	padding: 1.5rem;
 }
@@ -347,7 +416,7 @@ span {
 .game-list-item-text {
 	width: 73%;
 	position: relative;
-	color: #616378;
+	color: #616378 !important;
 	text-decoration: none;
 	padding: 1.5rem;
 }
@@ -413,7 +482,7 @@ span {
 }
 
 .square-label {
-	color: #616378;
+	color: #616378 !important;
 	font-weight: normal;
 	font-size: 2rem;
 	text-decoration: none;
@@ -423,11 +492,10 @@ span {
 	text-decoration: underline;
 }
 
-.content-square-1 {
+.content-square {
 	position: relative;
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%), url("imgs\\blog_1_square.jpg");
-	width: 24rem;
-	height: 24rem;
+	width: 21rem;
+	height: 21rem;
 	border-radius: 20px;
 	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.5);
 	background-size: cover;
@@ -435,47 +503,20 @@ span {
 	overflow: clip;
 }
 
-.content-square-1:hover {
+.content-square:hover {
 	cursor: pointer;
-	/*
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%), url("imgs\\blog_1_square.jpg");
-	*/
 	box-shadow: 0 6px 6px 0 rgba(0,0,0,0.3);
 	animation-name: zoom-in;
 	animation-duration: 0.2s;
 	background-size: 110%;
 }
 
-.content-square-2 {
-	position: relative;
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%), url("imgs\\pfj_square_2.jpg");
-	width: 24rem;
-	height: 24rem;
-	border-radius: 20px;
-	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.5);
-	background-size: cover;
-	background-position: center center;
-	overflow: clip;
-}
-
-.content-square-2:hover {
-	cursor: pointer;
-	/*
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%), url("imgs\\pfj_square_2.jpg");
-	*/
-	box-shadow: 0 6px 6px 0 rgba(0,0,0,0.3);
-	animation-name: zoom-in;
-	animation-duration: 0.2s;
-	background-size: 110%;
-}
-
-
-.content-square-1:not(:hover), .content-square-2:not(:hover) {
+.content-square:not(:hover) {
 	animation-name: zoom-out;
 	animation-duration: 0.2s;
 }
 
-.content-square-1:active, .content-square-2:active {
+.content-square:active {
 	box-shadow: 0 6px 6px 0 rgba(0,0,0,0);
 }
 
@@ -556,4 +597,8 @@ a:hover {
 .my-links {
 	margin-top: 1rem;
 	padding: 0;
+}
+
+a, a:visited {
+	color: #6c6ed9;
 }
