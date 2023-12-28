@@ -278,23 +278,55 @@ span {
 	padding-top: 0.1rem;
 }
 
-#software-list {
+#list {
 	margin-top: 2rem;
 }
 
-.software-list-item {
+.list-item {
 	display: flex;
 	height: 12rem;
-	border: 3px groove rgba(175, 200, 237, 0.9);
-	box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+	border: 2px solid rgba(150, 150, 180, 0.6);
+	box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.1);
 	margin-bottom: 2rem;
 }
 
-.software-list-item:hover {
-	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.4);
+.list-item:hover {
+	box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.1);
+	border: 2px solid rgba(150, 150, 180, 0.4);
+	animation-name: item-hover;
+	animation-duration: 0.2s;
 }
 
-.software-list-item-text {
+.list-item:not(:hover){
+	border: 2px solid rgba(150, 150, 180, 0.6);
+	box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.1);
+	animation-name: item-not-hover;
+	animation-duration: 0.2s;
+}
+
+@keyframes item-hover {
+	from {
+		border: 2px solid rgba(150, 150, 180, 0.6);
+		box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.1);
+	}
+	to {
+		box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.1);
+		border: 2px solid rgba(150, 150, 180, 0.4);
+	}
+}
+
+@keyframes item-not-hover {
+	from {
+		box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.1);
+		border: 2px solid rgba(150, 150, 180, 0.4);
+	}
+	to {
+		border: 2px solid rgba(150, 150, 180, 0.6);
+		box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.1);
+	}
+}
+
+.list-item-text {
 	width: 76%;
 	color: #616378 !important;
 	text-decoration: none;
@@ -302,150 +334,35 @@ span {
 	position: relative;
 }
 
-.software-list-item-text:hover {
+.list-item-text:hover {
 	text-decoration: underline;
 }
 
-.software-list-item-title {
+.list-item-title {
 	font-weight: normal;
 	font-size: 1.7rem;
-	margin: rem 0 0.5rem 0;
-	color: #616378;
+	line-height: 110%;
+	margin: -0.1rem 0 0.5rem 0;
 }
 
-.software-list-item-desc {
+.list-item-desc {
 	font-weight: normal;
 	margin-top: 0.8rem;
 	height: auto;
 }
 
-.software-list-item-image-container {
+.list-item-image-container {
 	width: 24%;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
 }
 
-.software-list-item-image {
+.list-item-image {
 	height: 12rem;
 }
 
-.software-list-item-date {
-	font-weight: bold;
-	margin-top: 0.2rem;
-	font-size: 0.9rem;
-	position: absolute;
-	bottom: 1rem;
-	color: #989cb8;
-}
-
-
-#blog-list {
-	margin-top: 2rem;
-}
-
-.blog-list-item {
-	display: flex;
-	height: 12rem;
-	border: 3px groove rgba(175, 200, 237, 0.9);
-	box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
-	margin-bottom: 2rem;
-}
-
-.blog-list-item:hover {
-	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.4);
-}
-
-.blog-list-item-text {
-	width: 73%;
-	position: relative;
-	color: #616378 !important;
-	text-decoration: none;
-	padding: 1.5rem;
-}
-
-.blog-list-item-text:hover {
-	text-decoration: underline;
-}
-
-.blog-list-item-title {
-	font-weight: normal;
-	font-size: 1.7rem;
-	line-height: 110%;
-	margin: -0.1rem 0 0.5rem 0;
-}
-
-#blog-list-item-desc {
-	font-weight: normal;
-	margin-top: 0.8rem;
-	height: auto;
-}
-
-.blog-list-item-image {
-	width: 200px;
-	margin-left: 3%;
-	margin-right: 0;
-	height: auto;	
-}
-
-.blog-list-item-date {
-	font-weight: bold;
-	margin-top: 0.2rem;
-	font-size: 0.9rem;
-	position: absolute;
-	bottom: 1rem;
-	color: #989cb8;
-}
-
-#game-list {
-	margin-top: 2rem;
-}
-
-.game-list-item {
-	display: flex;
-	height: 12rem;
-	border: 3px groove rgba(175, 200, 237, 0.9);
-	box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
-	margin-bottom: 2rem;
-}
-
-.game-list-item:hover {
-	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.4);
-}
-
-.game-list-item-text {
-	width: 73%;
-	position: relative;
-	color: #616378 !important;
-	text-decoration: none;
-	padding: 1.5rem;
-}
-
-.game-list-item-text:hover {
-	text-decoration: underline;
-}
-
-.game-list-item-title {
-	font-weight: normal;
-	font-size: 1.7rem;
-	line-height: 110%;
-	margin: -0.1rem 0 0.5rem 0;
-}
-
-#game-list-item-desc {
-	font-weight: normal;
-	margin-top: 0.8rem;
-	height: auto;
-}
-
-.game-list-item-image {
-	width: 200px;
-	margin-left: 3%;
-	margin-right: 0;
-	height: auto;	
-}
-
-.game-list-item-date {
+.list-item-date {
 	font-weight: bold;
 	margin-top: 0.2rem;
 	font-size: 0.9rem;
