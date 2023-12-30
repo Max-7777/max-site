@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "Lucida Console";
-	src: url("fonts/Lucida Console.ttf") format("truetype");
+	src: url("../fonts/Lucida Console.ttf") format("truetype");
 }
 
 :root {
