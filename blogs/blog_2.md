@@ -2,7 +2,7 @@
 title: "Blog #2 Functions for Stars and Polygons"
 ---
 <script src="../script.js"></script>
-<a href="../blogs.html">← blogs</a>
+<a href="../blogs.html">← Blog posts</a>
 <!-- pandoc -s --mathjax -c blog_style.css blog_2.md -o blog_2.html -->
 
 # Post \#2: Functions for Stars and Polygons

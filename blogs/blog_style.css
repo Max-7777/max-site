@@ -3,6 +3,10 @@
 	src: url("fonts/Lucida Console.ttf") format("truetype");
 }
 
+:root {
+	font-size: 15px;
+}
+
 html {
   color: #1a1a1a;
   background-color: #e6edf2;
@@ -22,7 +26,7 @@ body {
   background-color: #fff;
   margin: 0 auto;
   margin-top: 2.5rem;
-  width: 42rem;
+  width: 44rem;
   padding: 2.5rem 1.75rem 2.5rem 1.75rem;
   hyphens: auto;
   overflow-wrap: break-word;

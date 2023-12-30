@@ -2,7 +2,7 @@
 title: "Blog #1 PFJ Image Editor"
 ---
 <script src="../script.js"></script>
-<a href="../blogs.html">← blogs</a>
+<a href="../blogs.html">← Blog posts</a>
 
 <!-- pandoc -s --mathjax -c blog_style.css blog_1.md -o blog_1.html -->
 # Post \#1: PFJ Image Editor
