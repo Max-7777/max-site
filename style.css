@@ -48,6 +48,10 @@
 	src: url("fonts/Lucida Console.ttf") format("truetype");
 }
 
+:root {
+	font-size: 15px;
+}
+
 body {
 	/*font: Lucida Console*/
 	font-family: "Lucida Console";
@@ -94,7 +98,7 @@ h1 {
 	font-weight: normal;
 	color: #616378;
 	margin: 0px;
-	font-size: 2rem;
+	font-size: 1.75rem;
 }
 
 p {
@@ -104,14 +108,14 @@ p {
 }
 
 hr {
-	margin: 1.5rem 0 3.5rem 0;
+	margin: 1.5rem 0 3.25rem 0;
 	border: 1px inset white;
 }
 
 .content-box {
 	background: #f5f5f7;
-	width: 700px;
-	margin: 50px auto 50px auto;
+	width: 44rem;
+	margin: 2.5rem auto 2.5rem auto;
 	padding: 2.5rem 1.75rem 2.5rem 1.75rem;
 	border: 3px groove #afc8ed;
 	box-shadow: 0px 10px 16px rgba(0,0,0,0.4);
@@ -294,7 +298,7 @@ span {
 
 .list-item {
 	display: flex;
-	height: 12rem;
+	height: 13rem;
 	border: 2px solid rgba(150, 150, 180, 0.6);
 	box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.1);
 	margin-bottom: 2rem;
@@ -350,9 +354,9 @@ span {
 
 .list-item-title {
 	font-weight: normal;
-	font-size: 1.7rem;
+	font-size: 1.75rem;
 	line-height: 110%;
-	margin: -0.1rem 0 0.5rem 0;
+	margin: -0.1rem 0 0.75rem 0;
 }
 
 .list-item-desc {
@@ -369,7 +373,6 @@ span {
 }
 
 .list-item-image {
-	height: 12rem;
 }
 
 .list-item-date {
@@ -411,7 +414,7 @@ span {
 .square-label {
 	color: #616378 !important;
 	font-weight: normal;
-	font-size: 2rem;
+	font-size: 1.75rem;
 	text-decoration: none;
 }
 
@@ -421,8 +424,8 @@ span {
 
 .content-square {
 	position: relative;
-	width: 20rem;
-	height: 20rem;
+	width: 21rem;
+	height: 21rem;
 	border-radius: 16px;
 	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.5);
 	background-size: cover;
