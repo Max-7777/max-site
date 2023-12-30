@@ -221,8 +221,8 @@ hr {
 .nav-icon {
 	/* background-color: yellow; */
 	margin-right: 0.5rem;
-	width: 0.85rem;
-	height: 0.85rem;
+	width: 0.9rem;
+	height: 0.9rem;
 	display: inline-block;
 	vertical-align: middle;
 	transform: scale(0);
@@ -239,7 +239,7 @@ hr {
 	display: inline-block;
 	vertical-align: middle;*/
 	margin: auto;
-	width: 0.85rem;
+	width: 0.9rem;
 }
 
 /*
