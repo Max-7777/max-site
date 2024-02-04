@@ -26,8 +26,8 @@ body {
   background-color: #fff;
   margin: 0 auto;
   margin-top: 2.5rem;
-  width: 44rem;
-  padding: 2.5rem 1.75rem 2.5rem 1.75rem;
+  width: 40rem;
+  padding: 2.5rem 2.75rem 2.5rem 2.75rem;
   hyphens: auto;
   overflow-wrap: break-word;
   text-rendering: optimizeLegibility;
@@ -66,7 +66,7 @@ body {
 p {
   margin: 2em 0;
   line-height: 1.7em;
-  color: #616378; 
+  color: #616378;
 }
 
 ul {
@@ -83,7 +83,7 @@ svg {
 }
 
 h1 {
-  color: #616378; 
+  color: #616378;
   margin-top: 1em;
   line-height: 120%;
   font-weight: normal;
@@ -91,7 +91,7 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-  color: #616378; 
+  color: #616378;
   margin-top: 1.4em;
 }
 
@@ -254,7 +254,7 @@ iframe {
 	font-size: 1.2em;
 	padding: 0.1rem 0 0 0;
 	transform-origin: center center;
-	user-select: none; 
+	user-select: none;
 	line-height: 0.9rem;
 }
 
@@ -311,7 +311,7 @@ a, a:visited {
 
 #Index, #Blog, #Software, #Games, #Resume, #Photography {
 	transform-origin: center center;
-	user-select: none;      
+	user-select: none;
 }
 
 img[src*="#pfj_image"] {
@@ -323,4 +323,3 @@ img[src*="#pfj_image_2"] {
 	width: 250px;
 	height: auto;
 }
-

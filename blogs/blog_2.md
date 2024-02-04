@@ -25,7 +25,7 @@ I'm going to start with a way to graph a star with a polar function. A polar fun
 The shape we're looking to graph, a five-pointed star, is made up exclusively of straight and diagonal lines. Each line is angled and positioned in such a way that they connect and form five sides of a star. How can this pattern of diagonal lines be graphed with a polar function?
 
 We can start with an expression for a vertical line in polar form:
- 
+
 $$r=\frac{1}{\frac{1}{A}\cos(\theta)}$$
 
 Where $A$ is the intersection with the x-axis.
@@ -85,7 +85,7 @@ Where $A$ is the intersection with the x-axis and $B$ is the intersection with t
 
 Why does this expression take this form? There's a $\cos(\theta)$ and a $\sin(\theta)$ and they're in the denominator. Seems like this somehow relates to $\sec(\theta)$ and $\csc(\theta)$. This relationship does make sense, since $r=\sec(\theta)$ results in a vertical line and $r=\csc(\theta)$ results in a horizontal line. Naturally combining the two into one expression would make a diagonal line.
 
->On a side note, something kind of interesting with the diagonal line expression is its behaviour when $A$ or $B$ change. For example, as say $B$ increases, the $\sin(\theta)$ term loses magnitude. As $B$ goes all the way out to $\infty$, the $\frac{1}{B}\sin(\theta)$ term approaches $\frac{1}{\infty}\sin(\theta)$ or $0\sin(\theta)$. This results in the expression losing $sin(\theta)$ and turning into the expression for a vertical line: $\frac{1}{\frac{1}{A}\cos(\theta)}$. This is also reflected in the graph. As $B$ approaches $\infty$ the slope increases making the graph approach a vertical line. 
+>On a side note, something kind of interesting with the diagonal line expression is its behaviour when $A$ or $B$ change. For example, as say $B$ increases, the $\sin(\theta)$ term loses magnitude. As $B$ goes all the way out to $\infty$, the $\frac{1}{B}\sin(\theta)$ term approaches $\frac{1}{\infty}\sin(\theta)$ or $0\sin(\theta)$. This results in the expression losing $sin(\theta)$ and turning into the expression for a vertical line: $\frac{1}{\frac{1}{A}\cos(\theta)}$. This is also reflected in the graph. As $B$ approaches $\infty$ the slope increases making the graph approach a vertical line.
 
 >On another side note, the reciprocal of this diagonal line expression, $r=A\cos(\theta)+B\sin(\theta)$, results in a similar looking graph, but also something slightly different:
 
@@ -137,7 +137,7 @@ Wow! half a star! So we can see this clearly now. The star really is a series of
 
 After trial and error, I eventually found an expression that almost yields the star I'm looking for:
 
-$$r=\frac{1}{\cos\left(\operatorname{mod}\left(\theta-\frac{\pi}{10},\frac{2\pi}{5}\right)\right)}$$ 
+$$r=\frac{1}{\cos\left(\operatorname{mod}\left(\theta-\frac{\pi}{10},\frac{2\pi}{5}\right)\right)}$$
 
 ![img_graph](../imgs/blog_1_desmos_6.jpg "Graph of half of a five-pointed star")\
 
@@ -211,3 +211,5 @@ So those are just a few methods I've discovered that can be used to construct a 
 - [https://www.desmos.com/calculator/5vocgwk4qq](https://www.desmos.com/calculator/5vocgwk4qq)
 - [https://www.desmos.com/calculator/8pjhb3edte](https://www.desmos.com/calculator/8pjhb3edte)
 - [https://www.desmos.com/calculator/yvmur9tvmi](https://www.desmos.com/calculator/yvmur9tvmi)
+
+<a href="../blogs.html">← Blog posts</a>
