@@ -132,7 +132,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			// e.style.opacity = "0";
 			// e.style.transform = "translateY(150%)";
 			e.classList.add("show");
-			e.style.transitionDelay = (0.2*i).toString() + "s";
+			e.style.transitionDelay = (0.15*i).toString() + "s";
 		});
 	}, 5);
 
