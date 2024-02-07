@@ -57,7 +57,7 @@
 	--border-color: #d2d2d9;
 	/* --panel-color: #ebecf0; */
 	--panel-color: var(--box-color);
-	--date-color: #989cb8;
+	--date-color: #b6bbd9;
 }
 
 body {
@@ -120,7 +120,7 @@ h1 {
 h2 {
 	font-weight: normal;
 	margin: 0px;
-	line-height: 2rem;
+	line-height: 1.8rem;
 	margin: 0px;
 }
 
@@ -151,7 +151,6 @@ hr {
 	outline: 2px solid rgba(150, 150, 180, 0.6);
 	border: 2px solid var(--box-color);
 	box-shadow: 3px 6px 10px 0 rgba(0,0,0,0.1);
-	transition: all 0.2s;
 	display: flex;
 	flex-direction: column;
 }
@@ -172,7 +171,7 @@ hr {
 
 .panel-text {
 	flex: 1 1 auto;
-	padding: 1.5rem 1rem 2rem 1rem;
+	padding: 1.5rem 1.5rem 2rem 1rem;
 }
 
 .panel-text-header {
@@ -307,21 +306,22 @@ span {
 
 .list-item {
 	display: flex;
-	height: 13rem;
-	border: 1px solid rgba(150, 150, 180, 0.6);
+	height: 12.5rem;
+	outline: 2px solid rgba(150, 150, 180, 0.6);
+	border: 2px solid var(--box-color);
 	box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.1);
 	margin: 2.5rem auto 2.5rem auto;
 }
 
 .list-item:hover {
 	box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.1);
-	border: 2px solid rgba(150, 150, 180, 0.4);
+	outline: 2px solid rgba(150, 150, 180, 0.4);
 	animation-name: item-hover;
 	animation-duration: 0.2s;
 }
 
 .list-item:not(:hover){
-	border: 2px solid rgba(150, 150, 180, 0.6);
+	outline: 2px solid rgba(150, 150, 180, 0.6);
 	box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.1);
 	animation-name: item-not-hover;
 	animation-duration: 0.2s;
@@ -329,22 +329,22 @@ span {
 
 @keyframes item-hover {
 	from {
-		border: 2px solid rgba(150, 150, 180, 0.6);
+		outline: 2px solid rgba(150, 150, 180, 0.6);
 		box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.1);
 	}
 	to {
+		outline: 2px solid rgba(150, 150, 180, 0.4);
 		box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.1);
-		border: 2px solid rgba(150, 150, 180, 0.4);
 	}
 }
 
 @keyframes item-not-hover {
 	from {
+		outline: 2px solid rgba(150, 150, 180, 0.4);
 		box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.1);
-		border: 2px solid rgba(150, 150, 180, 0.4);
 	}
 	to {
-		border: 2px solid rgba(150, 150, 180, 0.6);
+		outline: 2px solid rgba(150, 150, 180, 0.6);
 		box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.1);
 	}
 }
@@ -354,7 +354,9 @@ span {
 	/* color: #616378 !important; */
 	color: var(--text-color) !important;
 	text-decoration: none;
-	padding: 1.5rem;
+	padding: 1.5rem 2rem 2rem 1rem;
+	/* 	paddi1.5rem 1.5rem 2rem 1rem;
+ */
 	position: relative;
 }
 
@@ -373,7 +375,7 @@ span {
 }
 
 .list-item-image-container {
-	width: 35%;
+	width: 40%;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -400,6 +402,17 @@ span {
   margin-right: -1em;
   padding-right: 1em;
 }
+
+.block-with-text-2 {
+  overflow: hidden;
+  position: relative;
+  line-height: 1.2em;
+  max-height: 2.4em;
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+}
+
 
 .block-with-text:before {
   content: '...';
