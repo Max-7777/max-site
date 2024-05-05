@@ -33,7 +33,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	var oneDay = 1000 * 60 * 60 * 24;
 	var day = Math.floor(diff / oneDay);
 
-	$('#time-until').html(String(153 - day));
+	if ($('#time-until').length) {
+		$('#time-until').html(String(153 - day));	
+	}
 
 	/*
 	//index.html nav buttons on mouse click
