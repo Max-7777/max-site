@@ -26,6 +26,15 @@ let chance = Math.round(Math.random()*100) == 1;
 // });
 
 window.addEventListener('DOMContentLoaded', () => {
+
+	var now = new Date();
+	var start = new Date(now.getFullYear(), 0, 0);
+	var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+	var oneDay = 1000 * 60 * 60 * 24;
+	var day = Math.floor(diff / oneDay);
+
+	$('#time-until').html(String(153 - day));
+
 	/*
 	//index.html nav buttons on mouse click
 	document.getElementById("blog-button").onclick = function () { location.href = "latex_test_2.html"; };
