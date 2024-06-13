@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	var day = Math.floor(diff / oneDay);
 
 	if ($('#time-until').length) {
-		$('#time-until').html(String(153 - day));	
+		$('#time-until').html(String(182 - day));	
 	}
 
 	/*
