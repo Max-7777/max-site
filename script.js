@@ -13,6 +13,7 @@ let selected_element_inner_html = null;
 let p_selected = false;
 let test = 0;
 let chance = Math.round(Math.random()*100) == 1;
+let dehtmlify = true;
 
 // addEventListener("beforeunload", () => {
 // 	document.querySelectorAll(".show").forEach((e, i) => {
@@ -26,17 +27,6 @@ let chance = Math.round(Math.random()*100) == 1;
 // });
 
 window.addEventListener('DOMContentLoaded', () => {
-
-	var now = new Date();
-	var start = new Date(now.getFullYear(), 0, 0);
-	var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
-	var oneDay = 1000 * 60 * 60 * 24;
-	var day = Math.floor(diff / oneDay);
-
-	if ($('#time-until').length) {
-		$('#time-until').html(String(182 - day));	
-	}
-
 	/*
 	//index.html nav buttons on mouse click
 	document.getElementById("blog-button").onclick = function () { location.href = "latex_test_2.html"; };
@@ -138,15 +128,39 @@ window.addEventListener('DOMContentLoaded', () => {
 	// 	});
 	// }
 
+	if (dehtmlify) {
+		setTimeout(() => {
+			document.querySelectorAll("a").forEach((e, i) => {
+				if (e.href.includes(".html")) {
+					e.href = e.href.substring(0,e.href.lastIndexOf("."));
+				}
+			});
+		}, 5);
+	}
+
 	setTimeout(() => {
 		document.querySelectorAll(".hidden").forEach((e, i) => {
 			// e.style.opacity = "0";
 			// e.style.transform = "translateY(150%)";
 			e.classList.add("show");
-			e.style.transitionDelay = (0.15*i).toString() + "s";
+			let dir = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1);
+
+			if (dir == "index.html" || dir == "index") {
+				e.style.transitionDelay = (0.15*i).toString() + "s";
+			} else {
+				e.style.transitionDelay = (0.07*i).toString() + "s";
+			}
 		});
 	}, 5);
 
+	setTimeout(() => {
+		document.querySelectorAll(".hidden-hor").forEach((e, i) => {
+			// e.style.opacity = "0";
+			// e.style.transform = "translateY(150%)";
+			e.classList.add("show-hor");
+			e.style.transitionDelay = (0.07*i).toString() + "s";
+		});
+	}, 5);
 
 	document.querySelectorAll(".content-panel").forEach((e) => {
 		e.addEventListener('mouseover', () => {
@@ -173,9 +187,75 @@ window.addEventListener('DOMContentLoaded', () => {
 		selected_element = null;
 	}));
 
-	//-- rip spinny circle animation
+	//-- RIP spinny circle animation
 	// update_button_loops();
 	// update_selector_loop();
+
+	//-- add to nav bar
+
+
+	let items = [
+		"<div class='nav-item'>",
+		"<div class='nav-icon' id='Index'>",
+		"<img id='nav-img' src='imgs/rotate_3.png'>",
+		"</div>",
+		"<div class='nav-text'>",
+		"<a class='link' href='index.html'>Index</a>",
+		"</div>",
+		"</div>",
+
+		// "<div class='nav-item'>",
+		// "<div class='nav-icon' id='Blog'>",
+		// "<img id='nav-img' src='imgs/rotate_3.png'>",
+		// "</div>",
+		// "<div class='nav-text'>",
+		// "<a class='link' href='blogs.html'>Blog</a>",
+		// "</div>",
+		// "</div>",
+
+		"<div class='nav-item'>",
+		"<div class='nav-icon' id='Software'>",
+		"<img id='nav-img' src='imgs/rotate_3.png'>",
+		"</div>",
+		"<div class='nav-text'>",
+		"<a class='link' href='software.html'>Software</a>",
+		"</div>",
+		"</div>",
+
+		"<div class='nav-item'>",
+		"<div class='nav-icon' id='Photography'>",
+		"<img id='nav-img' src='imgs/rotate_3.png'>",
+		"</div>",
+		"<div class='nav-text'>",
+		"<a class='link' href='photography.html'>Photography</a>",
+		"</div>",
+		"</div>",
+
+		"<div class='nav-item'>",
+		"<div class='nav-icon' id='Games'>",
+		"<img id='nav-img' src='imgs/rotate_3.png'>",
+		"</div>",
+		"<div class='nav-text'>",
+		"<a class='link' href='games.html'>Games</a>",
+		"</div>",
+		"</div>",
+
+		"<div class='nav-item'>",
+		"<div class='nav-icon' id='Resume'>",
+		"<img id='nav-img' src='imgs/rotate_3.png'>",
+		"</div>",
+		"<div class='nav-text'>",
+		"<a class='link' href='cv.html'>Resume</a>",
+		"</div>",
+		"</div>",
+
+	].join("\n");
+	if ($(".nav-skeleton").length) {
+		$(".nav-skeleton").append(items);
+	}
+
+
+
 });
 
 function update_button_loops() {

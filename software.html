@@ -2,73 +2,44 @@
 	<head>
 		<link rel="icon" type="image/x-icon" href="imgs/fav.jpg">
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 		<script src="script.js"></script>
 	</head>
 	<body>
-		<div class="content-box" style="height: 1500px;">
+		<div class="content-box" style="height: 1000px;">
 			<h1 style="display: none;">✧</h1>
 			<!-- <img src="image_1.png" style="width: 12%; height: 16%; position: absolute; left: 1200px; top: 100px"> -->
-			<div class="nav-links">
-				<div class="nav-item">
-					<div class="nav-icon" id="Index">
-						<img id="nav-img" src="imgs/rotate_3.png">
-					</div>
-					<div class="nav-text">
-						<a class="link" href="index.html">Index</a>
-					</div>
-				</div>
-				<div class="nav-item">
-					<div class="nav-icon" id="Blog">
-						<img id="nav-img" src="imgs/rotate_3.png">
-					</div>
-					<div class="nav-text">
-						<a class="link" href="blogs.html">Blog</a>
-					</div>
-				</div>
-				<div class="nav-item">
-					<div class="nav-icon" id="Software">
-						<img id="nav-img" src="imgs/rotate_3.png">
-					</div>
-					<div class="nav-text">
-						<a class="link" href="software.html">Software</a>
-					</div>
-				</div>
-				<div class="nav-item">
-					<div class="nav-icon" id="Games">
-						<img id="nav-img" src="imgs/rotate_3.png">
-					</div>
-					<div class="nav-text">
-						<a class="link" href="games.html">Games</a>
-					</div>
-				</div>
-				<div class="nav-item">
-					<div class="nav-icon" id="Resume">
-						<img id="nav-img" src="imgs/rotate_3.png">
-					</div>
-					<div class="nav-text">
-						<a class="link" href="cv.html">Resume</a>
-					</div>
-				</div>
-			</div>
+			<div class="nav-skeleton"></div>
 			<hr></hr>
-			<h1 style="margin-bottom: -0.75rem;">Software:</h1>
-			<div id="list">
-				<div class="list-item hidden">
-					<a class="list-item-text" href="https://github.com/Max-7777/PFJ-image-editor" target="_blank">
-						<h2 class="list-item-title" >PFJ Image Editor</h2>
-						<p class="list-item-desc">PFJ Image Editor is an Image editor program used to analyze images and add cool filters and effects!</p>
-						<p class="list-item-date">June 29, 2023</p>
-					</a>
-					<div class="list-item-image-container" style="background-image: url(imgs/pfj_image_editor.gif)"></div>
-				</div>
-				<div class="list-item hidden">
-					<a class="list-item-text" href="https://github.com/Max-7777/lerp-sim" target="_blank">
-						<h2 class="list-item-title" >Lerp Sim</h2>
-						<p class="list-item-desc">Lerp Sim is a program that visualizes linear interpolation.</p>
-						<p class="list-item-date">August 18, 2022</p>
-					</a>
-					<div class="list-item-image-container" style="background-image: url(imgs/lerp_2.gif)"></div>
-				</div>
+			<h1 class="hidden">Software</h1>
+			<div class="list-vert">
+				<a href="web.html" style="text-decoration: none;">
+					<div class="list-item-vert hidden">
+						<div class="list-item-vert-text">
+							<h1 class="" >Web</h1>
+							<p class="list-item-vert-desc">Things on the web.</p>
+						</div>
+						<div class="list-item-vert-image-container" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 60%, rgba(245, 246, 247, 0.6) 75%, rgba(245, 246, 247, 255) 100%), url('imgs/web_tn_3.jpg');"></div>
+					</div>
+				</a>
+				<a href="desmos.html" style="text-decoration: none;">
+					<div class="list-item-vert hidden">
+						<div class="list-item-vert-text">
+							<h1 class="" >Desmos</h1>
+							<p class="list-item-vert-desc">Projects made with Desmos graphing calculator.</p>
+						</div>
+						<div class="list-item-vert-image-container" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 60%, rgba(245, 246, 247, 0.6) 75%, rgba(245, 246, 247, 255) 100%), url('imgs/desmos_bg_4.jpg');"></div>
+					</div>
+				</a>
+				<a href="programs.html" style="text-decoration: none;">
+					<div class="list-item-vert hidden">
+						<div class="list-item-vert-text">
+							<h1 class="" >Programs</h1>
+							<p class="list-item-vert-desc">Downloadable software.</p>
+						</div>
+						<div class="list-item-vert-image-container" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 60%, rgba(245, 246, 247, 0.6) 75%, rgba(245, 246, 247, 255) 100%), url('imgs/programs_bg_4.png');"></div>
+					</div>
+				</a>
 			</div>
 		</div>
 	</body>
