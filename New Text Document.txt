@@ -6,15 +6,12 @@
 		<script src="script.js"></script>
 	</head>
 	<body>
-		<div class="content-box" style="height: 1000px;">
+		<div class="content-box" style="height: 1500px;">
 			<h1 style="display: none;">✧</h1>
 			<!-- <img src="image_1.png" style="width: 12%; height: 16%; position: absolute; left: 1200px; top: 100px"> -->
 			<div class="nav-skeleton"></div>
 			<hr></hr>
-
-			<h1 class="hidden">Programs</h1>
-			<p class="hidden" style="margin: 0.5rem 0 2rem 0;">Software that can be downloaded and run. Most files hosted on my <a href="https://github.com/Max-7777" target="_blank">Github↗</a> are in the form of .exe files or .jar files.</p>
-
+			<h1 style="margin-bottom: -0.75rem; margin-top: 2rem;" class="hidden">Software:</h1>
 			<div id="list">
 				<div class="list-item hidden">
 					<a class="list-item-text" href="https://github.com/Max-7777/PFJ-image-editor" target="_blank">
@@ -22,9 +19,7 @@
 						<p class="list-item-desc">PFJ Image Editor is an image editing program. It can analyze images and add various filters and effects.</p>
 						<!-- <p class="list-item-date">June 29, 2023</p> -->
 					</a>
-					<div class="list-item-image-container">
-						<video src="imgs/pfj_images.mp4" muted loop autoplay class="" style="height: 125%;">
-					</div>
+					<video src="imgs/pfj_images.mp4" muted loop autoplay class="list-item-image-container">
 					</video>
 					<!-- <div class="list-item-image-container" style="background-image: url(imgs/pfj_image_editor.gif)"></div> -->
 				</div>
@@ -37,6 +32,6 @@
 					<div class="list-item-image-container" style="background-image: url(imgs/lerp_2.gif)"></div>
 				</div>
 			</div>
-        </div>
-    </body>
+		</div>
+	</body>
 </html>
